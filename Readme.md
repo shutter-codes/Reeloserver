@@ -8,8 +8,7 @@ This repository contains the backend code for a full-stack music player web appl
 
 - **User Authentication**
   - Sign up with email and password
-  - Sign in to access personalized features
-
+    
 - **Song Library**
   - Browse available songs
   - Select songs for playback or to add to playlists
@@ -21,8 +20,7 @@ This repository contains the backend code for a full-stack music player web appl
 
 - **Music Playback**
   - Play selected songs
-  - Resume playback from last position
-
+    
 ## Tech Stack
 
 - **Backend**
@@ -110,10 +108,4 @@ This repository contains the backend code for a full-stack music player web appl
 ### File Upload
 - `POST /api/upload`: Upload a song file
 
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## License
-
-This project is licensed under the MIT License.
+### Project Deployed on Railway
