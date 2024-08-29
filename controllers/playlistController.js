@@ -131,7 +131,7 @@ exports.addSongToPlaylist = async (req, res) => {
         return res.status(404).json({ message: 'Playlist not found' });
       }
   
-      await playlist.remove();
+    await Playlist.deleteOne({ _id: playlistId });
   
       res.status(200).json({ message: 'Playlist deleted successfully' });
     } catch (error) {
