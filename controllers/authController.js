@@ -73,3 +73,12 @@ exports.login = async (req, res) => {
     }
 };
 
+exports.logout = (req, res) => {
+    try {
+       
+
+        res.status(200).json({ message: 'Logout successful' });
+    } catch (error) {
+        res.status(500).json({ message: 'Server error' });
+    }
+};

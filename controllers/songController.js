@@ -46,7 +46,7 @@ exports.updateSong = async (req, res) => {
         const updatedSong = await Song.findByIdAndUpdate(
             id,
             { title, artist, url },
-            { new: true } // returns the updated document
+            { new: true } 
         );
 
         if (!updatedSong) {
