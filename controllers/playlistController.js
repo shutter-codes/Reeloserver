@@ -120,3 +120,22 @@ exports.addSongToPlaylist = async (req, res) => {
       res.status(500).json({ message: 'Failed to remove song from playlist' });
     }
   };
+
+  exports.DeletePlaylist = async (req, res) => {
+    const { playlistId } = req.params;
+  
+    try {
+     
+      const playlist = await Playlist.findById(playlistId);
+      if (!playlist) {
+        return res.status(404).json({ message: 'Playlist not found' });
+      }
+  
+      await playlist.remove();
+  
+      res.status(200).json({ message: 'Playlist deleted successfully' });
+    } catch (error) {
+      console.error('Error deleting playlist:', error);
+      res.status(500).json({ message: 'Failed to delete playlist' });
+    }
+  }
