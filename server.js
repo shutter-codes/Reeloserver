@@ -11,6 +11,7 @@ const cors = require('cors');
 const multer = require('multer');
 const path = require('path');
 
+cors()
 dotenv.config();
 connectDB();
 
